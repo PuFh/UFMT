@@ -1,0 +1,83 @@
+obs:.Compilar - traduzir uma código de alto nivel para baixo nivel(máquina), para que o computador entenda!
+:.	debugar - acompanhar passo a passo o código
+:.	registrador - "caixinha de memória dentro do processador
+
+	*GRADE DE FORMA SURPEFICIAL*
+variáveis, laçaos, condicionais, estrutura de controle e laço.
+operações matmáticas;
+ponteiros e endereço de memória;
+Manipulação de arquivos
+Construindo bibliotecas proprias;
+
+-APRESENTAÇÃO
+Linguagem C criada por Dennis Ritchie
+C é uma linguagem de "médio nivel"
+	permite manipulação de bits. bytes e endereço de memórias
+C é linguagem estruturada
+
+-ESTRUTURA ELEMENTAR DE UM CÓDIGO EM C
+:. Erro de compilação - léxico(escreveu errado) ou sintático(monta uma estrutura sitáticamente errado), algo que
+está escrito corretamente, porém, na faz sentido.
+
+#include <stdio.h>
+#include <stlib.h>
+
+int soma(int,int);  //Protótipo: é obrigatório ter uma estrutra pré-pronta da função, caso queira, pode declarar o diretamente no protótipo.
+
+int main(){
+	in x, y, total;
+
+	x=2;
+	y=3;
+	total=soma(x,y);
+}
+int soma(int v1, int v2){
+	return v1+v2;
+}
+
+-MEU PRIMEIRO PROGRAMA
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	printf("Olá mundo\n"); #da biblioteca
+	return 1;  #que o código é verdadeiro, ou pode utilizar "EXIT_SUCCESS;"
+}
+
+##Notas
+no terminal você precisa criar um "saida" para o seu código
+
+aluno@lab2-22:~/Documentos/2-semestre/estrutura-de-dados/13-10$ gcc apresentacao.c -o saida
+aluno@lab2-22:~/Documentos/2-semestre/estrutura-de-dados/13-10$ ./ saida
+bash: ./: É um diretório
+aluno@lab2-22:~/Documentos/2-semestre/estrutura-de-dados/13-10$ ./saida
+Ola mundo
+
+:. gcc apresentacao.c -o saida --- cria uma saida que eu chamei de "saida", mas é 
+recomendado utilizar o próprio nome do arquivo c para fazer isso. No meu caso,
+eu chamei de saida para ficar visualmente legivel.
+
+./saida -- eu executei e saida para executar o código, que foi inicializado e imprimiu
+"ola mundo".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
