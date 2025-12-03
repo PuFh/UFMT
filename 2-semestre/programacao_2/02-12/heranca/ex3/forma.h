@@ -6,17 +6,12 @@
 
 class Forma{
 protected:
-    double base, altura, f_area;
+    double base, altura;
     
 public:
     //CONSTRUTOR
     Forma(double b, double h) : base(b), altura(h){}    
 
-
-    //metodo virtual area
-    virtual double area(){
-        f_area = base*altura;
-    }
 
     //GETTERS
     virtual double getBase(){
@@ -25,6 +20,12 @@ public:
     virtual double getAltura(){
         return altura;
     }
+    
+    //metodo virtual area
+    virtual double area(){
+        return base*altura;
+    }
+
 
 };
 #endif

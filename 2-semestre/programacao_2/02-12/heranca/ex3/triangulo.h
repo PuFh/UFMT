@@ -13,10 +13,18 @@ private:
 
 public:
     //contrutor
-    Triangulo(double b, double h) : Forma(base, altura){}
+    Triangulo(double b, double h) : Forma(b,h){}
+
+    //GETTERS
+    virtual double getBase(){
+        return base;
+    }
+    virtual double getAltura(){
+        return altura;
+    }
 
     double area() override{
-        f_area = (base*altura)/2;
+        return (base*altura)/2;
     }
 };
 

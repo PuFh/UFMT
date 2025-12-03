@@ -5,16 +5,22 @@
 
 #include <string>
 #include <iostream>
-#include <math.h>
 
+
+const double PI = 3.14159265358979323846;
 class Circulo : public Forma {
 
 private:
     double raio;
+    
 public:
-    Circulo(double r) : Forma(0,0),
+    Circulo(double r) : Forma(0,0), raio(r){}
+
+    ////GETTERS
+
+    //metodo virtual area
     double area() override{
-        area = ;
+        return PI*(raio *raio);
     }
 };
 
