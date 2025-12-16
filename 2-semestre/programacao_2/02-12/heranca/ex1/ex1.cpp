@@ -12,7 +12,7 @@ int main () {
     Cachorro cachorro{};
     Gato gato{};
     Vaca vaca{};
-
+    
     std::vector < Animal * > animais ;
     animais.push_back(& cachorro ) ;
     animais.push_back(& gato ) ;
