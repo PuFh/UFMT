@@ -42,9 +42,9 @@ int main(){
     imprimeHeap(&heap);
 
     //ordenando o vetor
-    for(int i = 0; i > heap.contador; i++){
-        v[i] = heap.vetor[i];
-        removeHeap(&heap);
+    for(int i = 0; i < 5; i++){
+        v[i] = removeHeap(&heap);
+        
     }
     for(int i = 0; i <5;i++){
         printf("%d|",v[i]);
@@ -95,7 +95,7 @@ int desceHeap(hash* heap, int indice){
         ind_menor = indFEsq(indice);
         //verifica se ha filho a direita
         if(indFDir(indice) < heap->contador){
-            //verifica se o filho esquerdo eh maior que o filho da direita
+            //verifica se o filho direito eh menor que o filho da direita
             if(heap->vetor[indFDir(indice)] < heap->vetor[indFEsq(indice)]){
                 ind_menor = indFDir(indice);
             }
