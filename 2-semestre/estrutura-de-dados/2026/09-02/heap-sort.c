@@ -1,10 +1,7 @@
 #include "stdlib.h"
 #include "stdio.h"
-#include "time.h"//lib que usaremos para a implementação de numeros aleatorios
-//srand()%100
 
-//IREMOS UTILIZAR O CONCEITO DO HEAP MIN
-
+//NO HEAP SORTE, IREMOS UTILIZAR O HEAP MIN PARA PODERMOS ORDENAR UMA LISTA DO MENOR VALOR PARA O MAIOR VALOR
 
 #define TAM 50
 
@@ -21,16 +18,37 @@ int insereHeap(hash*, int);
 int removeHeap(hash*);
 int sobeHeap(hash*, int);
 int desceHeap(hash*, int);
-void imprimiHeap(hash*);
+void imprimeHeap(hash*);
 
 
 int main(){
     hash heap;
 
     inicializaHeap(&heap);
-    
-    insereHeap(&heap, 15);
 
+    /*
+    insereHeap(&heap, 15);
+    insereHeap(&heap, 8);
+    insereHeap(&heap, 25);
+    insereHeap(&heap, 9);
+    */
+
+    int v[5] = {15,12,6,1,2};
+
+    for(int i = 0; i < 5; i++){
+        insereHeap(&heap, v[i]);
+    }
+    
+    imprimeHeap(&heap);
+
+    //ordenando o vetor
+    for(int i = 0; i > heap.contador; i++){
+        v[i] = heap.vetor[i];
+        removeHeap(&heap);
+    }
+    for(int i = 0; i <5;i++){
+        printf("%d|",v[i]);
+    }
     return 0;
 }
 
@@ -39,7 +57,7 @@ void inicializaHeap(hash* heap){
     heap->contador = 0;
 }
 
-int indFesq(int indice){
+int indFEsq(int indice){
     return (2*indice + 1);
 }
 
@@ -69,25 +87,27 @@ int desceHeap(hash* heap, int indice){
     //     }
     // }
     // desceHeap(heap, **)
-    int ind_maior;
+
+    int ind_menor;//alteracao para pegarmos o valor do menor indice
+
     //verifica se ha filho a esquerda
     if(indFEsq(indice) < heap->contador){
-        ind_maior = indFEsq(indice);
+        ind_menor = indFEsq(indice);
         //verifica se ha filho a direita
         if(indFDir(indice) < heap->contador){
             //verifica se o filho esquerdo eh maior que o filho da direita
-            if(heap->vetor[indFDir(indice)] > heap->vetor[indFEsq(indice)]){
-                ind_maior = indFDir(indice);
+            if(heap->vetor[indFDir(indice)] < heap->vetor[indFEsq(indice)]){
+                ind_menor = indFDir(indice);
             }
         }
     
         int ax;
-        if(heap->vetor[ind_maior] > heap->vetor[indice]){
+        if(heap->vetor[ind_menor] < heap->vetor[indice]){
             ax = heap->vetor[indice];
-            heap->vetor[indice] = heap->vetor[ind_maior];
-            heap->vetor[ind_maior] = ax;
+            heap->vetor[indice] = heap->vetor[ind_menor];
+            heap->vetor[ind_menor] = ax;
         }
-        desceHeap(heap, ind_maior);
+        desceHeap(heap, ind_menor);
         return 1;
     }
     return 0;
@@ -96,7 +116,7 @@ int desceHeap(hash* heap, int indice){
 int sobeHeap(hash* heap, int indice){//o int n seria o indice
     int temp;
     if(indice > 0){
-        if(heap->vetor[indice] > heap->vetor[indPai(indice)]){
+        if(heap->vetor[indice] < heap->vetor[indPai(indice)]){
             temp = heap->vetor[indPai(indice)];
             heap->vetor[indPai(indice)] = heap->vetor[indice];
             heap->vetor[indice] = temp;
@@ -133,4 +153,14 @@ int removeHeap(hash* heap){
 
     }
     return 0;//erro
+}
+
+//Funcao que imprime o heap - para debugacao
+void imprimeHeap(hash *heap) {
+    int i;
+    printf("Heap:\nQtd de elementos = %d\n[ ", heap->contador);
+    for (i=0; i < heap->contador; i++) {
+        printf("%d ", heap->vetor[i]);
+    }
+    printf("]\n");
 }

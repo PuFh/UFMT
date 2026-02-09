@@ -1,6 +1,7 @@
 #include "stdlib.h"
 #include "stdio.h"
 
+
 #define TAM 50
 
 typedef struct hash{
@@ -34,7 +35,7 @@ void inicializaHeap(hash* heap){
     heap->contador = 0;
 }
 
-int indFesq(int indice){
+int indFEsq(int indice){
     return (2*indice + 1);
 }
 
