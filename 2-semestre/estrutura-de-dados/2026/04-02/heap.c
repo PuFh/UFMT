@@ -1,9 +1,7 @@
 #include "stdlib.h"
 #include "stdio.h"
-#include "time.h"//lib que usaremos para a implementação de numeros aleatorios
-//srand()%100
 
-#define TAM 10
+#define TAM 50
 
 typedef struct hash{
     int vetor[TAM], contador;
