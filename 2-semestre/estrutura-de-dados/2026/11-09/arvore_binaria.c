@@ -14,15 +14,18 @@ typedef struct arvore_binaria{
 int insercao(arvore_binaria*, int);
 
 int main(){
-    arvore_binaria tree;
+    arvore_binaria *tree;
+    tree = NULL;
+    printf("correto");
 
     insercao(&tree,15);
     insercao(&tree,20);
     insercao(&tree,8);
 
     printf("correto");
-    printf("%d",tree.valor);
-    printf("%d",tree.fEsq->valor);
+
+    printf("%d",tree->valor);
+    printf("%d",tree->fEsq->valor);
 
     return 0;
 }
@@ -36,6 +39,7 @@ int insercao(arvore_binaria *temp, int v){
         temp->valor = v;
         temp->fDir = NULL;
         temp->fEsq = NULL;
+        return temp;
     }else{
         if(v > temp->valor){//filho direto
             insercao(temp->fDir, v);
