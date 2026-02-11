@@ -24,7 +24,7 @@ int main(){
     printf("%d",tree.valor);
     printf("%d",tree.fEsq->valor);
 
-    return true;
+    return 0;
 }
 
 int insercao(arvore_binaria *temp, int v){
