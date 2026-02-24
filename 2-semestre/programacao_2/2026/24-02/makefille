@@ -1,0 +1,18 @@
+# Variables [cite: 11]
+CC = g++
+CFLAGS = -Wall -O2
+
+# Target to generate the executable 
+PhysicsEngine: Vetor2D.o main.o
+	$(CC) $(CFLAGS) -o PhysicsEngine Vetor2D.o main.o
+
+# Rules for object files [cite: 12]
+Vetor2D.o: Vetor2D.cpp Vetor2D.h
+	$(CC) $(CFLAGS) -c Vetor2D.cpp
+
+main.o: main.cpp Vetor2D.h
+	$(CC) $(CFLAGS) -c main.cpp
+
+# Clean target 
+clean:
+	rm -f *.o PhysicsEngine
