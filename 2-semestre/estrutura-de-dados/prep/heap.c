@@ -8,16 +8,33 @@ void heapify(int arr[], int n, int i){
     int filhoEs = 2*i + 1;
     int filhoDi = 2*i +2;
     int ax;
-    if(filhoEs > filhoDi){
-        ax = filhoEs;
-    }else{
-        ax = filhoDi;
+
+    if(filhoEs < n && arr[filhoEs] > arr[maior]){
+        maior = filhoEs;
     }
-    if(maior < ax){
-        maior = ax;
+    if(filhoDi < n && arr[filhoDi] > arr[maior]){
+        maior = filhoDi;
+    }
+
+    if(maior != i){
+        ax = arr[i];
+        arr[i] = arr[maior];
+        arr[maior] = ax;
+        heapify(arr, n, maior);
     }
 }
 void heapSort(int arr[], int n){
+    int i, ax;
+    for( i = n/2-1; i >= 0; i--){
+        heapify(arr, n, i);
+    }
+    for(i = n-1; i > 0;i--){
+        ax = arr[0];
+        arr[0] = arr[i];
+        arr[i] = ax;
+
+        heapify(arr, i,0);
+    }
 
 }
 
