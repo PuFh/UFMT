@@ -19,9 +19,8 @@ int main(){
 
     head = criaNo(head, 10);
     head = insereInicio(head, 13);
-    imprime(head);
-
-    head = insereFim(head, 12);
+    
+    head = insereFim(head, 20);
     imprime(head);
 }
 
@@ -50,9 +49,8 @@ void imprime(lista* li){
 
 lista* insereInicio(lista* li, int v){
     //caso a lista esteja vazia
-    lista* p;
     if(li==NULL){
-       p =  criaNo(li, v);
+       lista* p =  criaNo(li, v);
        return p;
     }
     lista* novo = (lista*)malloc(sizeof(lista));
@@ -66,11 +64,6 @@ lista* insereInicio(lista* li, int v){
 //insere no fim(O QUE VIEMOS FAZER)
 lista* insereFim(lista* li, int v){
     //caso a nossa lista esteja vazia
-    if(li == NULL){
-       lista* p =  criaNo(li, v);
-       return p;
-    }
-    
 
     lista* novo = (lista*)malloc(sizeof(lista));
 
