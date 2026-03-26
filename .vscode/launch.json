@@ -13,7 +13,7 @@
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
-            "preLaunchTask": "C/C++: gcc.exe arquivo de build ativo",
+            "preLaunchTask": "gcc: compilar arquivo ativo",
             "setupCommands": [
                 {
                     "description": "Habilitar pretty-printing",
@@ -24,29 +24,3 @@
         }
     ]
 }
-/*
-```
-
->  Confirma se o caminho `C:\\MinGW\\bin\\gdb.exe` bate com o seu MSYS2/MinGW. Pode ser `C:\\msys64\\mingw64\\bin\\gdb.exe` dependendo da instalação.
-
----
-
-## 2. Usar o debug
-
-| Ação | Atalho |
-|------|--------|
-| Iniciar debug | **F5** |
-| Colocar breakpoint | **F9** na linha desejada |
-| Avançar linha | **F10** |
-| Entrar numa função | **F11** |
-| Ver variáveis | Painel **Variables** à esquerda |
-| Ver pilha de chamadas | Painel **Call Stack** |
-
----
-
-## 3. Pelo que vi no seu console
-
-A saída mostra:
-```
-20 --> 20 --> NuLL
-Fim da Lista! */
