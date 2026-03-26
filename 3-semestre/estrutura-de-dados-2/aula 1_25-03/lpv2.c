@@ -15,12 +15,17 @@ lista* insereInicio(lista*, int);
 void imprime(lista*);
 
 int main(){
+
+
+
+
     lista* head;
 
     head = criaNo(head, 10);
     head = insereInicio(head, 13);
     
     head = insereFim(head, 20);
+    head = insereFim(head, 51);
     imprime(head);
 }
 
@@ -65,18 +70,19 @@ lista* insereInicio(lista* li, int v){
 lista* insereFim(lista* li, int v){
     //caso a nossa lista esteja vazia
 
-    lista* novo = (lista*)malloc(sizeof(lista));
+    lista* novo = criaNo(li,v);
 
     lista* p = li;
     lista* q = li;
 
-    while( q != NULL){
-        p = q;
-        q = q->prox;  
+    while( p != NULL){
+        q = p;
+        p = p->prox;  
     }
     printf("aqui\n");
-    if(q == NULL){
-        p->prox = novo;
+    if(q != NULL){
+        q->prox = novo;
+        return li;
     }else{
         li = novo;
         return li;
