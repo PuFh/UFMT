@@ -27,7 +27,7 @@
 /*
 ```
 
-> ⚠️ Confirma se o caminho `C:\\MinGW\\bin\\gdb.exe` bate com o seu MSYS2/MinGW. Pode ser `C:\\msys64\\mingw64\\bin\\gdb.exe` dependendo da instalação.
+>  Confirma se o caminho `C:\\MinGW\\bin\\gdb.exe` bate com o seu MSYS2/MinGW. Pode ser `C:\\msys64\\mingw64\\bin\\gdb.exe` dependendo da instalação.
 
 ---
 
