@@ -82,9 +82,8 @@ lista* insereFim(lista* li, int v){
     printf("aqui\n");
     if(q != NULL){
         q->prox = novo;
-        return li;
     }else{
         li = novo;
-        return li;
     }
+    return li;//poderia colocar o li no if e else separadamente caso ache melhor
 }
