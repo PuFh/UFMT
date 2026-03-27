@@ -24,17 +24,3 @@
         }
     ]
 }
-
-/*
-## 2. Usar o debug
-
-| Ação | Atalho |
-|------|--------|
-| Iniciar debug | **F5** |
-| Colocar breakpoint | **F9** na linha desejada |
-| Avançar linha | **F10** |
-| Entrar numa função | **F11** |
-| Ver variáveis | Painel **Variables** à esquerda |
-| Ver pilha de chamadas | Painel **Call Stack** |
-
-*/
