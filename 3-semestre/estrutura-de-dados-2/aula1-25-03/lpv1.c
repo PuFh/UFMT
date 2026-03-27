@@ -19,7 +19,7 @@ lista* insereOrdem(lista*,int);
 int main(){
     lista* head;
 
-    head = criaNo(23);
+    head = criaNo(15);
 
     head = insereOrdem(head, 20);
 
@@ -66,9 +66,11 @@ void imprime(lista* li){
 }
 
 lista* insereOrdem(lista* li, int v){
+    //faz com que n precisemos alocar varias vezes espaco alocacao de memoria, como no if de ser menor que a cabeca e fora
+    lista* novo = criaNo(v);
 
-    if(li == NULL || li->valor < v){
-        lista* novo = criaNo(v);
+    if(li == NULL || li->valor > v){
+        
         novo->prox = li;
         return novo;
     }
@@ -77,7 +79,6 @@ lista* insereOrdem(lista* li, int v){
     lista* p = li;
     lista* q = li;
 
-    lista* novo = (lista*)malloc(sizeof(lista));
     novo->valor = v;
     novo->prox = li;
 
@@ -85,7 +86,7 @@ lista* insereOrdem(lista* li, int v){
 
     while(p->prox != NULL && p->valor < novo->valor ){
 
-        //avanca um bloco
+        //avanca um bloco e faz com que o q fique sempre uma posicao anterior que o p
         q = p;
         p = p->prox;
     }
@@ -95,25 +96,4 @@ lista* insereOrdem(lista* li, int v){
     return li;
 
 }
-/*
-lista* insereOrdem(lista* li, int v) {
-    lista* novo = criaNo(v);
 
-    // lista vazia ou inserir antes do head
-    if (li == NULL || v < li->valor) {
-        novo->prox = li;
-        return novo;
-    }
-
-    // percorre até achar a posição certa
-    lista* p = li;
-    while (p->prox != NULL && p->prox->valor < v) {
-        p = p->prox;
-    }
-
-    novo->prox = p->prox;
-    p->prox = novo;
-
-    return li; // head não mudou
-}
-*/
