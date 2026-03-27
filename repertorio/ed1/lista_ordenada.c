@@ -45,7 +45,7 @@ void imprimeLista(no* li){
         return;
     }
 
-    printf("%d -->",li->valor);
+    printf(" %d-->",li->valor);
     imprimeLista(li->prox);
 }
 
@@ -66,7 +66,7 @@ no* insereOrdem(no* li, int v){
     no* prox = li;
     no* ant = li;
 
-    while(li != NULL && prox->valor < v){
+    while(prox != NULL && prox->valor < v){
         //avanca uma posicao e o ant fica uma posicao atras de prox
         ant = prox;
         prox = prox->prox;
