@@ -8,10 +8,17 @@
       "args": [
         "${file}",
         "-o",
-        "${fileDirname}/${fileBasenameNoExtension}.exe",
+        "${fileDirname}/saida.exe",
         "-g"
       ],
-      "group": { "kind": "build", "isDefault": true }
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/c"]
+        }
+      },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": "$gcc"
     }
   ]
 }
