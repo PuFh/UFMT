@@ -12,8 +12,8 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
-            "preLaunchTask": "gcc: compilar arquivo ativo",
+            "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+            "preLaunchTask": "C/C++: gcc.exe arquivo de build ativo",
             "setupCommands": [
                 {
                     "description": "Habilitar pretty-printing",
@@ -24,3 +24,17 @@
         }
     ]
 }
+
+/*
+## 2. Usar o debug
+
+| Ação | Atalho |
+|------|--------|
+| Iniciar debug | **F5** |
+| Colocar breakpoint | **F9** na linha desejada |
+| Avançar linha | **F10** |
+| Entrar numa função | **F11** |
+| Ver variáveis | Painel **Variables** à esquerda |
+| Ver pilha de chamadas | Painel **Call Stack** |
+
+*/
