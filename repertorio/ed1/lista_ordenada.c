@@ -178,7 +178,7 @@ no* exclui(no* li, int excluir){
 
 //funcao alterar
 no* alterar(no* li, int vAntigo, int vNovo){
-    /*
+    
     //caso 1: valor inicial da lista for oq iremos substituir
     if(li->valor == vAntigo){
         //verificar se esta ordenado
@@ -186,7 +186,7 @@ no* alterar(no* li, int vAntigo, int vNovo){
         li = insereOrdem(li, vNovo);
 
         return li;
-    }*/
+    }
 
     //caso 2: percorrer a lista ate encontrar o valor para sub
     no* prox = li;
