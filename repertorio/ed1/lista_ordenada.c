@@ -22,7 +22,7 @@ int main(){
     
     int opcao = 0;
     
-    while (opcao != 4){
+    while (opcao != 5){
         
         printf("-------------------\n");
         printf("| LISTA ORDENADA  |\n");
@@ -158,7 +158,7 @@ no* exclui(no* li, int excluir){
     no* prox = li;
     no* ant = li;
     //faremos um laco para percorrer a lista se for diferente de nula ou se o valor que queremos excluir for diferente do valor da posicao que a lista esta
-    while(prox != NULL && prox->valor != excluir){
+    while(prox != NULL){
         if(prox->valor == excluir){
             ant->prox = prox->prox;//isso faz com que pulemos o bloco que queremos excluir(que é somento o prox)
             free(prox);
@@ -171,7 +171,7 @@ no* exclui(no* li, int excluir){
         }
 
     }
-    printf("Valor não existe na sua lista!\n");
+    printf("Valor nao existe na sua lista!\n");
     return li;
 }
 
