@@ -30,7 +30,8 @@ int main(){
         printf("1 -> Adicionar\n");
         printf("2 -> imprimir\n");
         printf("3 -> Excluir\n");
-        printf("4 -> Sair\n");
+        printf("4 -> Alterar\n");
+        printf("5 -> Sair\n");
         printf("\n-->");
         scanf("%d",&opcao);
         
@@ -177,16 +178,15 @@ no* exclui(no* li, int excluir){
 
 //funcao alterar
 no* alterar(no* li, int vAntigo, int vNovo){
-
+    /*
     //caso 1: valor inicial da lista for oq iremos substituir
     if(li->valor == vAntigo){
-        li->valor = vNovo;
         //verificar se esta ordenado
         li = exclui(li, vAntigo);
         li = insereOrdem(li, vNovo);
 
         return li;
-    }
+    }*/
 
     //caso 2: percorrer a lista ate encontrar o valor para sub
     no* prox = li;
@@ -204,10 +204,9 @@ no* alterar(no* li, int vAntigo, int vNovo){
         return li;
     }else{
         //o valor existe, entao prox->valor é = a vantigo
-        prox->valor = vNovo;
 
         //verificar se esta ordenado
-        li = exclui(li, vAntigo);
+        li = exclui(li, prox->valor);
         li = insereOrdem(li, vNovo);
 
         return li;
