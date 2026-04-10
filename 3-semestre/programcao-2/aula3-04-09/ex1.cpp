@@ -25,7 +25,7 @@ int main(){
     else{
         autorizacao = 0;
     }
-    //condicao para
+    //condicao para sim
 
     if((16 <= idade <=17 && autorizacao) || idade > 17){
         std::cout <<"Digite o nivel" <<std::endl;

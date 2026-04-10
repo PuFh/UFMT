@@ -1,7 +1,0 @@
-//fontes com ligaduras, para melhor leitura de código 
-{
-    "editor.fontFamily": "JetBrains Mono",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 14,
-    "workbench.activityBar.location": "top",
-}
