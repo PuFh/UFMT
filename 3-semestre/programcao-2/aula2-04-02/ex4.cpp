@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
 
-
-int main(){
+int main() {
     std::string nome;
     float salario;
 
@@ -10,12 +9,9 @@ int main(){
     std::getline(std::cin, nome);
 
     printf("Salario: ");
-    scanf("%f",&salario);
+    scanf("%f", &salario);
 
     printf("--------------\n");
-    printf("Nome: %s\nSalario %.2f\n",nome.c_str(),salario);
+    printf("Nome: %s\nSalario %.2f\n", nome.c_str(), salario);
     printf("--------------\n");
-
-    
-   
 }
