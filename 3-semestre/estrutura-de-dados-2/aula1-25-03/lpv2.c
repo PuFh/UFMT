@@ -21,7 +21,7 @@ int main(){
 
     lista* head;
 
-    head = criaNo(head, 10);
+     head = criaNo(head, 10);
     head = insereInicio(head, 13);
     
     head = insereFim(head, 20);
