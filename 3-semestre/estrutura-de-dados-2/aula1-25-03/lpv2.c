@@ -1,89 +1,84 @@
 #include "stdio.h"
 #include "stdlib.h"
 
-typedef struct lista{
+typedef struct lista {
     int valor;
-    struct lista* prox;
-}lista;
+    struct lista *prox;
+} lista;
 
-//Implemente a função que insere valores no fim da lista encadeada
+// Implemente a função que insere valores no fim da lista encadeada
 
-//prototipo
-lista* criaNo(lista*, int);
-lista* insereFim(lista*,int);
-lista* insereInicio(lista*, int);
-void imprime(lista*);
+// prototipo
+lista *criaNo(lista *, int);
+lista *insereFim(lista *, int);
+lista *insereInicio(lista *, int);
+void imprime(lista *);
 
-int main(){
+int main() {
 
+    lista *head;
 
-
-
-    lista* head;
-
-     head = criaNo(head, 10);
+    head = criaNo(head, 10);
     head = insereInicio(head, 13);
-    
+
     head = insereFim(head, 20);
     head = insereFim(head, 51);
     imprime(head);
 }
 
-lista* criaNo(lista* li, int v){
-    lista* novo = (lista*)malloc(sizeof(lista));
+lista *criaNo(lista *li, int v) {
+    lista *novo = (lista *)malloc(sizeof(lista));
 
-    if(novo==NULL){
+    if (novo == NULL) {
         printf("Error ao alocar memoria dinamicamente!");
     }
     novo->valor = v;
     novo->prox = NULL;
     return novo;
-
 }
 
-//impressoa
-void imprime(lista* li){
+// impressoa
+void imprime(lista *li) {
 
-    if(li == NULL){
+    if (li == NULL) {
         printf(" NuLL\nFim da Lista!");
         return;
     }
-    printf("%d --> ",li->valor);
+    printf("%d --> ", li->valor);
     imprime(li->prox);
 }
 
-lista* insereInicio(lista* li, int v){
-    //caso a lista esteja vazia
-    if(li==NULL){
-       lista* p =  criaNo(li, v);
-       return p;
+lista *insereInicio(lista *li, int v) {
+    // caso a lista esteja vazia
+    if (li == NULL) {
+        lista *p = criaNo(li, v);
+        return p;
     }
-    lista* novo = (lista*)malloc(sizeof(lista));
+    lista *novo = (lista *)malloc(sizeof(lista));
     novo->valor = v;
     novo->prox = li;
     return novo;
-
-
 }
 
-//insere no fim(O QUE VIEMOS FAZER)
-lista* insereFim(lista* li, int v){
-    //caso a nossa lista esteja vazia
+// insere no fim(O QUE VIEMOS FAZER)
+lista *insereFim(lista *li, int v) {
+    // caso a nossa lista esteja vazia
 
-    lista* novo = criaNo(li,v);
+    lista *novo = criaNo(li, v);
 
-    lista* p = li;
-    lista* q = li;
+    lista *p = li;
+    lista *q = li;
 
-    while( p != NULL){
+    while (p != NULL) {
         q = p;
-        p = p->prox;  
+        p = p->prox;
     }
     printf("aqui\n");
-    if(q != NULL){
+    if (q != NULL) {
         q->prox = novo;
-    }else{
+    } else {
         li = novo;
     }
-    return li;//poderia colocar o li no if e else separadamente caso ache melhor
+    return li; // poderia colocar o li no if e else separadamente caso ache
+               // melhor
 }
