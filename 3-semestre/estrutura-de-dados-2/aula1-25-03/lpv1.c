@@ -1,6 +1,9 @@
 #include "stdio.h"
 #include "stdlib.h"
 
+//TODO: funcoes
+
+
 //struct
 typedef struct lista{
     int valor;
