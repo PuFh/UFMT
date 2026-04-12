@@ -21,7 +21,7 @@ lista* insereOrdem(lista*,int);
 //main
 int main(){
     lista* head;
-
+    lis
     head = criaNo(15);
 
     head = insereOrdem(head, 20);
