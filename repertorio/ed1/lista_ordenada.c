@@ -35,8 +35,7 @@ int main(){
         printf("\n-->");
         scanf("%d",&opcao);
         
-        switch (opcao)
-        {
+        switch (opcao){
         case 1:
             printf("Digite o valor no qual voce deseja adicionar: ");
             int valor;
