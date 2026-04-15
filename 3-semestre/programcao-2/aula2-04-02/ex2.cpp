@@ -14,7 +14,7 @@ int main() {
 
     std::printf("Digite a sua idade: ");
     std::cin >> idade;
-
+    
     std::printf("Digite a sua altura: ");
     std::cin >> altura;
 
