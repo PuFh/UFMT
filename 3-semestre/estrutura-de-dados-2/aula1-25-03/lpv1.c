@@ -1,6 +1,5 @@
 #include "stdio.h"
 #include "stdlib.h"
-
 //TODO: funcoes
 
 
@@ -21,11 +20,11 @@ lista* insereOrdem(lista*,int);
 //main
 int main(){
     lista* head;
-    lis
+
     head = criaNo(15);
 
     head = insereOrdem(head, 20);
-
+    
     head = insereOrdem(head, 13);
     head = insereOrdem(head, 7);
     imprime(head);
