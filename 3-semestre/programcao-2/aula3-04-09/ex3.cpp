@@ -5,9 +5,10 @@ int main(){
 
     std::cin >> n;
 
+    soma = 0;//para n ter lixo de memoria
     if( n > 100 ){
         std::cout <<"Valor muito grande!\n";
-        return 0;
+        return false;
     }
     for(int i = 1; i < n;i++){
         if(n%i == 0){
