@@ -124,20 +124,28 @@ TNoA* rotacao(TNoA* p){
 TNoA* rotdir(TNoA* p){
     TNoA* ax = p->ant;
 
+    TNoA* temp = p->dir;
+    TNoA* gp = ax->ant;
+
+    p->dir = ax;
+    ax->esq = temp;
     ax->ant = p;
-    p->esq = ax;
-    ax->dir = p->esq;
-    p->esq->ant = ax;
-    p = rotacao(p);
+    p->ant = gp;
+
+    return p;
 }
 TNoA* rotesq(TNoA* p){
     TNoA* ax = p->ant;
 
-    ax->ant = p;
+    TNoA* temp = p->esq;
+    TNoA* gp = ax->ant;
+
     p->esq = ax;
-    ax->dir = p->esq;
-    p->esq->ant = ax;
-    p = rotacao(p);
+    ax->dir = temp;
+    ax->ant = p;
+    p->ant = gp;
+
+
     return p;
 }
 
