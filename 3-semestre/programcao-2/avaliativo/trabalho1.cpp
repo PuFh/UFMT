@@ -10,12 +10,12 @@ int main(){
     int vetor[TAM];
     int maior,ax,sequencia;
 
-    for(int i = 0; i < 15; i++){
+    for(int i = 0; i < TAM; i++){
         std::cout << "Digite o valor na posicao "<< i+1 <<": ";
         std::cin >> vetor[i];
     }
 
-    std::cout <<"-----------\n";
+    std::cout <<"\n-----------\n\n";
     std::cout << "[";
     for(int i = 0; i < TAM; i++){
         std::cout <<vetor[i]<<" ";
@@ -35,6 +35,8 @@ int main(){
             ax = 0;
         }
     }
+    //por que? pq a variavel maior só atualiza no for quando a variavel for impar, entao se n ultima posicao for par, n iriamos atualizar o maior
+    //o ax teria a maior squencia mas o maior n
     if(ax > maior){
         maior = ax;
     }
