@@ -35,7 +35,7 @@ int main(){
             ax = 0;
         }
     }
-    //por que? pq a variavel maior só atualiza no for quando a variavel for impar, entao se n ultima posicao for par, n iriamos atualizar o maior
+    //pq? pq a variavel maior só atualiza no for quando a variavel for impar, entao se n ultima posicao for par, n iriamos atualizar o maior
     //o ax teria a maior squencia mas o maior n
     if(ax > maior){
         maior = ax;
