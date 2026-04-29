@@ -22,12 +22,23 @@ int main(){
     }
     std::cout << "]\n";
 
+    //alteracoes
+    int ax_indice,maior_indice,ind_inicio,ind_fim;
+    ax_indice = 0;
+    maior_indice= 0;
+    ind_inicio = 0;
+    ind_fim = 0;
+    //-----
     maior = 0;
     ax = 0;
     for(int i = 0; i < TAM;i++){
         if(vetor[i] % 2 == 0){
+            if(ax == 0){
+                ind_inicio = i;
+            }
             ax++;
         }else{
+            ind_fim = i-1;
             if(ax > maior){
                 maior = ax;
             }
@@ -35,12 +46,13 @@ int main(){
             ax = 0;
         }
     }
-    //pq? pq a variavel maior só atualiza no for quando a variavel for impar, entao se n ultima posicao for par, n iriamos atualizar o maior
-    //o ax teria a maior squencia mas o maior n
+    //att fim
     if(ax > maior){
         maior = ax;
     }
     sequencia = maior;
     
     std::cout << "Maior Sequencia: "<<sequencia<<std::endl;
+
+    std::cout << "Inicio: "<<ind_inicio<<", fim: "<<ind_fim<<std::endl;
 }
