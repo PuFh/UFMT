@@ -65,14 +65,14 @@ int insereMatriz(MATRIZ* m, int lin, int col, float val){
     novo->valor = val;
     novo->coluna = col;
     novo->prox = NULL;//por enquanto
-    //percorrer a linha
-    for(int i = 0; i != lin; i++){
-        //percorre ate o i ser igual a lin
-        m->A[i] = m->A[i+1];
-    }
+
     //aqui estamos na posicao exata para percorrermor as colunas
     PONT ax = m->A[lin];
     PONT ant = ax;
+    if(ax == NULL){
+        ax = novo;
+        return 0;
+    }
     while(ax->coluna != col){
         ant = ax;//uma posicao atras
         ax = ax->prox;
@@ -106,7 +106,9 @@ int main(){
     
     m = inicializarMatriz(4,4);
 
-    insereMatriz(m,2,3,2.5);//a matriz q vamos add, lin,col,val
+    insereMatriz(m,2,1,2.5);//a matriz q vamos add, lin,col,val
+    insereMatriz(m,2,3,5.0);
+    insereMatriz(m,2,2,12.54);
    
 
 
