@@ -156,7 +156,7 @@ int *dijkstra(GRAFO *g, int s, int *p){
     //implemente a função que realiza o algoritmo de dijkstra
     //implemente outras funções auxiliares necessárias
     for(int i = 0 ; i < g->vertices; i++){
-        g->adj->cab->peso
+        g->adj->cab->peso;
     }
 }
 
