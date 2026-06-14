@@ -1,0 +1,2 @@
+Custo total: 261159288
+Tempo: 209.066000 segundos
