@@ -1,0 +1,10 @@
+Instancia processada: USA-road-d.NY.gr
+custo total da arvore: 261159288
+tempo de execucao do alg kruskal: 0.160000 segundos
+
+
+Instancia processada: USA-road-d.CAL.gr
+custo total da arvore: 4270584202
+tempo de execucao do alg kruskal: 1.596000 segundos
+
+
