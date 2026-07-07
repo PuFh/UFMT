@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main(){
-    Gato miau("Junio", 7, -2.0);
+    Gato miau("Junio", 7, 3.0);
 
     miau.aprensetar();
 }
