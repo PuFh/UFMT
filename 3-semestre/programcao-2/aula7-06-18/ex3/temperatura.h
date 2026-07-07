@@ -5,6 +5,7 @@
 class Temperatura{
 private:
 float temperaturaCelsius;
+float conversaofahrenheit(float temp_celsius); //funccao auxiliar, ela esta private pq n eh pra ninguem chamar ela
 
 public:
 //construtor
@@ -14,9 +15,8 @@ void alterar(float temp_celsius);
 
 //getters
 float getTemperaturaCelsius();
-float getTemperaturaFahrenheit();
+float getTemperaturaFahrenheit();// n eh pra nin
 
-float conversaofahrenheit(float temp_celsius); //funccao auxiliar
 
 };
 

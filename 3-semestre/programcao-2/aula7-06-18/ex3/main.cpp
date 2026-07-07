@@ -13,7 +13,7 @@ int main(){
         std::cout <<"3. Alterar temperatura"<<std::endl;
         std::cout <<"0. Sair"<<std::endl;
         std::cout <<"-------------\n"<<std::endl;
-        std::cout <<"[->";
+        std::cout <<"[-> ";
         std::cin >>opcao;
         switch (opcao){
         case 1:
