@@ -7,7 +7,7 @@ int main(){
     float temperatura;
 
     while(opcao != 0){
-        std::cout <<"----CONTA BANCARIA----"<<std::endl;
+        std::cout <<"----Termometro----"<<std::endl;
         std::cout <<"1. Ver Temperatura(Celsius)"<<std::endl;
         std::cout <<"2. Temperatura(Fahrenheit)"<<std::endl;
         std::cout <<"3. Alterar temperatura"<<std::endl;

@@ -47,6 +47,10 @@ int main(){
         std::cout <<"\nTamanho da lista: "<<myList.size()<<std::endl;  
         break;
 
+        case 6:
+        std::cout <<"Saindo...\n";
+        break;
+
         default:
         std::cout <<"\nValor invalidado\n";
             break;

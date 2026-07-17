@@ -1,7 +1,7 @@
 #include "pessoa.h" //a nossa funcao pessoa
 #include <iostream>
 
-Pessoa::Pessoa(std::string n, int i){
+Pessoa::Pessoa(std::string n, int i){//construtor sendo instanciado
     nome = n;
     idade = i;
 }

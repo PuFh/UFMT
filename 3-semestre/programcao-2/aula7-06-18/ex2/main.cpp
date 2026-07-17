@@ -3,7 +3,7 @@
 
 int main(){
     CONTABANCARIA usuario1(2341, 0);//usuario
-    int opcao;
+    int opcao=-1;
     double p;
 
     while(opcao != 0){
