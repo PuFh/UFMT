@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "primos",
+            "request": "launch",
+            "mainClass": "primos",
+            "projectName": "UFMT_c064e246"
+        },
+        {
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
@@ -30,6 +37,5 @@
                 }
             ]
         }
-
     ]
 }

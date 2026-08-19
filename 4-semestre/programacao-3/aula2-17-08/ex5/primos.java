@@ -5,22 +5,19 @@ public class primos {
         Scanner leitor = new Scanner(System.in);
 
         int n;
-
-
-        System.out.print("Digite o o invervalo que deseja (0 a N): ");
+        int j;
+        System.out.print("Digite o tamanho do ranged para ver os numeros primo dele(0 a n):");
         n = leitor.nextInt();
-        int i =1;
-        int j =1;
-        int primo = 0;
 
-        for(i = 1; i <= n; i++){
-            while(i%j != 0){
-                primo = i;
-                j++;
+        for(int i = 2; i < n; i++){
+            for(j = 2; i%j != 0; j++){
+                
             }
-            if(i == j)//eh primo
-                System.out.print(primo);
+            if(i == j)
+                System.out.println(i);
         }
+
+
         leitor.close();
     }
 }
