@@ -14,12 +14,12 @@ public class primos {
         int primo = 0;
 
         for(i = 1; i <= n; i++){
-            while(i%j != 0){
-                primo = i;
-                j++;
+            for(j = 1; j <= i; j++){
+                if(i%j == 0){
+                    j = i+1
+                }
             }
-            if(i == j)//eh primo
-                System.out.print(primo);
+            System.out.print(j);
         }
         leitor.close();
     }
