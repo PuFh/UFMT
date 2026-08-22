@@ -1,1 +1,17 @@
-*.class out/ target/ .idea/ *.log .DS_Store Thumbs.db
+# Compiled class files
+*.class
+
+# Build output folders
+out/
+target/
+
+# Editor configs
+.idea/
+.vscode/
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
