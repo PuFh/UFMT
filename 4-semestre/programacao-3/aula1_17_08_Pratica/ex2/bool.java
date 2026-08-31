@@ -1,3 +1,5 @@
+package aula1_17_08_Pratica.ex2;
+
 public class bool {
     public static void main(String[] args){
         //declaracao das variaveis booleanas

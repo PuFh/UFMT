@@ -1,3 +1,5 @@
+package aula1_14_08_Teorica.ex1;
+
 public class ex1 {
     public static void main(String[] args){
         int fibonacci[] = new int[30];

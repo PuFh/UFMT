@@ -1,3 +1,5 @@
+package aula1_17_08_Pratica.ex4;
+
 import java.util.Scanner;
 
 public class operacoes {
