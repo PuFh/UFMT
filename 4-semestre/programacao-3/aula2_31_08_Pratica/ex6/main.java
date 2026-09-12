@@ -39,5 +39,6 @@ public class main {
             soma += c.saldo;
         }
         System.out.println("Saldo Total: "+soma);
+
     }
 }
